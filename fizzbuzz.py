@@ -1,8 +1,8 @@
-def fizz_buzz_generator(user_input):
+def fizz_buzz_generator(_user_input):
     while True:
         try:
-            user_input = int(user_input)
-            if user_input < 1:
+            _user_input = int(_user_input)
+            if _user_input < 1:
                 continue
         except ValueError:
             continue
@@ -10,19 +10,18 @@ def fizz_buzz_generator(user_input):
 
     FizzBuzz = []
 
-    for n in range(1, user_input + 1):
-        x = str(n)
-        Fizz = (n % 3 == 0)
-        Buzz = (n % 5 == 0) 
+    for n in range(1, _user_input + 1):
 
-        if Fizz:
-            x = "Fizz"
-        if Buzz and x == "Fizz":
-            x += "Buzz"
-        elif Buzz:
-            x = "Buzz"
+        tmp = str(n)
 
-        FizzBuzz.append(x)
+        if (n % 3 == 0):
+            tmp = "Fizz"
+        if (n % 5 == 0 and tmp == "Fizz"):
+            tmp += "Buzz"
+        elif (n % 5 == 0):
+            tmp = "Buzz"
+
+        FizzBuzz.append(tmp)
 
     print(FizzBuzz)
 
