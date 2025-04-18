@@ -23,7 +23,7 @@ def fizz_buzz_generator(user_input):
         elif Buzz:
             FizzBuzz.append("Buzz")
         else:
-            FizzBuzz.append(f"{n}")
+            FizzBuzz.append(str(n))
         n += 1
     print(FizzBuzz)
 
