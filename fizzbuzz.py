@@ -10,9 +10,7 @@ def fizz_buzz_generator(user_input):
 
     FizzBuzz = []
 
-    n = 1
-
-    while n <= user_input:
+    for n in range(1, user_input + 1):
         x = str(n)
         Fizz = (n % 3 == 0)
         Buzz = (n % 5 == 0) 
@@ -25,7 +23,6 @@ def fizz_buzz_generator(user_input):
             x = "Buzz"
 
         FizzBuzz.append(x)
-        n += 1
 
     print(FizzBuzz)
 
