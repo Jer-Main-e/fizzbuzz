@@ -13,18 +13,20 @@ def fizz_buzz_generator(user_input):
     n = 1
 
     while n <= user_input:
+        x = str(n)
         Fizz = (n % 3 == 0)
         Buzz = (n % 5 == 0) 
 
-        if Fizz and Buzz:
-            FizzBuzz.append("FizzBuzz")
-        elif Fizz:
-            FizzBuzz.append("Fizz")
+        if Fizz:
+            x = "Fizz"
+        if Buzz and x == "Fizz":
+            x += "Buzz"
         elif Buzz:
-            FizzBuzz.append("Buzz")
-        else:
-            FizzBuzz.append(str(n))
+            x = "Buzz"
+
+        FizzBuzz.append(x)
         n += 1
+
     print(FizzBuzz)
 
 fizz_buzz_generator(input("Voer één geheel getal in wat groter is dan 0 (e.g. 15): "))
